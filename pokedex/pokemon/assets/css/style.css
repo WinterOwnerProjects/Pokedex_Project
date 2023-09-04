@@ -1,0 +1,306 @@
+
+/* Main Config */
+main{
+    height: 100vh;
+}
+
+/* Containers */
+.container1{
+    background-color: green;
+    height:40%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.container1 div{
+    display: flex;
+    justify-content: center;
+}
+.container2{
+    background-color: white;
+    /* height: 64vh; */
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    margin-top: -35px;
+    padding: 1.8rem;
+    z-index: 3;
+    position: sticky;
+}
+
+/* Imgs [Container1] */
+#img1{
+    width: 80%;
+    z-index: 1;
+    position: absolute;
+    filter: opacity(23%);
+    top: 30px;
+}
+#img2{
+    width: 250px;
+    z-index: 2;  
+}
+
+/* Header_infos [Container2] */
+.header_infos > nav > ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap:1.3rem;
+}
+.header_infos > nav > ul > li > label{
+    font-size:1.17rem;
+    font-weight: bold;
+    border:none;
+}
+
+/* Inputs Config */
+input[name="menu_options"]{
+    appearance: none;
+}
+
+/* Conditional CSS */
+.onclicked {
+    text-decoration: underline blue 4px solid;
+    text-underline-offset: 10px;
+}
+.actived{
+    display: block;
+}
+.deactived{
+    display: none;
+}
+
+/* Body_infos [Container2] */
+.all{
+    margin-top: 4rem;
+    background-color: #fff;
+}
+
+/* H3 Body_infos [Container2] */
+h3{
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+h3 > span{
+    font-weight: 500;
+}
+
+/* About-text [Container2] */
+#Genders{
+    display: flex;
+    align-items: center;
+    gap: 0 1rem
+}
+.gender > span {
+    display: flex;
+    align-items: center;
+}
+.gender > span > img{
+    width:1rem;
+}
+
+/* Status-text All-Configs [Container2] */
+#Status-text > h3{
+    display: flex;
+    align-items: center;
+}
+.attribute_content{
+    display: flex;
+    align-items: center;
+}
+.attribute_content > span > hr{
+    border: 4px solid black;
+    text-align: left;
+} 
+.attribute_name{
+    font-weight: normal;
+}
+.attribute_value{
+    font-weight: bold;
+}
+/* Status-text Bars-config [Container2] */
+#hp_bar{
+    border-color: red;
+    width:45px;
+}
+#attack_bar{
+    border-color: orange;
+    width:60px;
+}
+#defense_bar{
+    border-color: blue;
+    width:48px;
+}
+#spatk_bar{
+    border-color: orange;
+    width:65px;
+}
+#spdef_bar{
+    border-color: blue;
+    width:65px;
+}
+#speed_bar{
+    border-color: rgb(0, 92, 128);
+    width:45px;
+}
+#total_bar{
+    border-color: green;
+    width:117px;
+}
+
+/* Evolutions-text [Container 2] */
+#Evolutions-text > div{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+#Evolutions-text > div > div {
+    display: flex;
+    align-items: center;
+}
+#Evolutions-text > div > div > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#Evolutions-text > div > div > span{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+#Evolutions-text > div > div > div > span{
+    font-weight: bolder; 
+}
+
+/* Responsive CSS */
+
+@media screen and (min-width: 320px) {
+    #img1{
+        top:-30px;
+    }
+    #img2{
+        width:200px;
+    }
+    .header_infos > nav > ul > li > label {
+        font-size: 1rem;
+    }
+    .container2{
+        margin-top: -25px;
+    }
+    .all{
+        margin-top: 2rem;
+        background-color: #fff;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    #About-text{
+        padding-left: 1rem;
+    }
+    #Status-text{
+        padding-left: 1rem;
+        height: 40vh;
+    }
+    #Status-text > h3 ,h2{
+        margin-bottom: 0.4rem;
+    }
+    #Evolutions-text > div > div > span {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 393px){
+    #img1{
+        top:55px;
+    }
+    #img2{
+        position: relative;
+        top: -32px;
+    }
+    .container2 {
+        margin-top: -52px;
+    }
+    #About-text{
+        padding-left: 3rem;
+    }
+    #Status-text{
+        padding-left: 3rem;
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 768px){
+    .container2{
+        height: 65vh;
+    }
+    .header_infos > nav > ul > li > label, h2 {
+        font-size: 1.7rem;
+    }
+    #About-text{
+        padding-left: 11rem;
+    }
+    #Status-text{
+        padding-left:11rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    #Evolutions-text > div > div > div > img{
+        width: 200px;
+    }
+    #Evolutions-text > div > div > div > span {
+        font-size: 1.3rem;
+    }
+    #Evolutions-text > div > div > span {
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 1024px){
+    h3 {
+        font-size: 1.6rem;
+    }
+    .header_infos > nav > ul > li > label, h2 {
+        font-size: 3rem;
+    }
+    .body_infos{
+        padding-top: 1rem;
+    }
+    .header_infos > nav > ul {
+        gap: 3.3rem;
+    }
+    #Status-text > h3, #Status-text > p{
+        font-size: 2.2rem; 
+    }
+    #Status-text > h2{
+        margin-bottom: 1.5rem;
+    }
+    #Evolutions-text > div > div > div > span {
+        font-size: 2.3rem;
+    }
+    #Evolutions-text > div > div > div > img {
+        width: 250px;
+    }
+    #Evolutions-text > div > div > span {
+        font-size: 5rem;
+    }
+    #img1 {
+        top: -180px;
+    }
+    #img2 {
+        width: 350px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    #img1 {
+        top: -300px;
+    } 
+    #img2 {
+        width: 450px;
+    }
+    #Status-text , #About-text{
+        padding-left: 23rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}

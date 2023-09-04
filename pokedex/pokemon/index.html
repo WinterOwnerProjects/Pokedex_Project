@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulbasaur</title>
+    
+    <!-- Normalize CSS init -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Project fonts -->
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- My Css and JS -->
+    <link rel="stylesheet" src="/exercicios_e_projetos/pokedex/assets/css/style.css">
+    <link rel="stylesheet" href="/exercicios_e_projetos/pokedex/pokemon/assets/css/global.css">
+    <link rel="stylesheet" href="/exercicios_e_projetos/pokedex/pokemon/assets/css/style.css">
+    <script src="/exercicios_e_projetos/pokedex/assets/js/pokemon-model.js" defer></script>
+    <script src="/exercicios_e_projetos/pokedex/pokemon/assets/js/menu_config.js" defer></script>
+    <script src="/exercicios_e_projetos/pokedex/pokemon/assets/js/main.js" defer></script>
+
+</head>
+<body>
+    <main>
+        <section class="container1">
+            <div>
+                <img id="img1" src="/exercicios_e_projetos/pokedex/assets/img/Pokeball-PNG-Free-Download.png" alt="">
+                <img id="img2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="">
+            </div>
+        </section>
+        <section class="container2">
+            <div class="header_infos">
+                <nav>
+                    <ul>
+                        <li>
+                            <input type="radio" name="menu_options" id="About" value="About" checked>
+                            <label for="About" class="onclicked">About</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="menu_options" id="Status" value="Status">
+                            <label for="Status">Status</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="menu_options" id="Evolutions" value="Evolutions">
+                            <label for="Evolutions">Evolutions</label>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="body_infos">
+                <div id="About-text" class="all actived">
+                    <div>
+                        <h3>
+                            Species:
+                            <span id="Species">&nbsp;&nbsp;Seed</span><br><br>
+                        </h3>
+                        <h3>
+                            Height:
+                            <span id="Heigth">&nbsp;&nbsp;2'3.6* (0.70 cm)</span><br><br>
+                        </h3>
+                        <h3>
+                            Weight:
+                            <span id="Weight">&nbsp;&nbsp;15.2 lbs (6.9 kg)</span><br><br>
+                        </h3>
+                        <h3>
+                            Abilities:
+                            <span id="Abilities">&nbsp;&nbsp;Overgrow, Chlorophyl</span><br><br>
+                        </h3>
+                        <h2>Breeding</h2><br>
+                        <h3>
+                            <div id="Genders">
+                                Gender:&nbsp;&nbsp;
+                                <div class="gender">
+                                    <span><img src="https://static.thenounproject.com/png/730605-200.png" alt="">87.5%</span>
+                                </div>
+                                <div class="gender">
+                                    <span><img src="https://static.thenounproject.com/png/390695-200.png" alt="">12.5%</span>
+                                </div>
+                            </div><br>
+                        </h3>
+                        <h3>
+                            Egg Groups:
+                            <span id="Egg Groups">&nbsp;&nbsp;Monster</span><br><br>
+                        </h3>
+                        <h3>
+                            Egg Cycle:
+                            <span id="Egg Cycle">&nbsp;&nbsp;Grass</span><br><br>
+                        </h3>
+                    </div><br><br>
+                </div>
+                <div id="Status-text" class="all deactived">
+                    <h3>
+                        <span class="attribute_name">HP:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">45&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="hp_bar"></span>
+                        </div>
+                    </h3>
+                    <h3>
+                        <span class="attribute_name">Attack:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">60&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="attack_bar"></span>
+                        </div>
+                    </h3>
+                    <h3>
+                        <span class="attribute_name">Defense:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">48&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="defense_bar"></span>
+                        </div>
+                    </h3>
+                    <h3>
+                        <span class="attribute_name">Sp. Atk:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">65&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="spatk_bar"></span>
+                        </div>
+                    </h3>
+                    <h3>
+                        <span class="attribute_name">Sp. Def:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">65&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="spdef_bar"></span>
+                        </div>
+                    </h3>
+                    <h3>
+                        <span class="attribute_name">Speed:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">45&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="speed_bar"></span>
+                        </div>
+                    </h3>
+                    <h3>
+                        <span class="attribute_name">Total:&nbsp;&nbsp;</span>
+                        <div class="attribute_content">
+                            <span class="attribute_value hp">317&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span><hr id="total_bar"></span>
+                        </div>
+                    </h3><br>
+                    <h2>Types defenses</h2>
+                    <p>The effectiveness of each type on Charmander</p><br><br>
+                </div>
+                <div id="Evolutions-text" class="all deactived">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+                                <span>Bulbasaur</span>
+                            </div>
+                            <span>→</span>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="">
+                                <span>Ivysaur</span>
+                            </div>
+                            <span>→</span>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="">
+                                <span>Venosaur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+
+    </script>
+</body>
+</html>
