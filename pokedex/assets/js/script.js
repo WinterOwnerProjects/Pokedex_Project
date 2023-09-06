@@ -4,11 +4,13 @@ function create_element(element, element_attributes = {}){
     element_attributes.id ? new_element.setAttribute('id', element_attributes.id) : '';
     element_attributes.type ? new_element.setAttribute('type', element_attributes.type) : '';
     element_attributes.data_value ? new_element.innerText = element_attributes.data_value : '';
+    element_attributes.href ? new_element.setAttribute('href', element_attributes.href) : '';
     element_attributes.src ? new_element.setAttribute('src', element_attributes.src) : '';
     element_attributes.alt ? new_element.setAttribute('alt', element_attributes.alt) : '';
     return new_element
 }
 function convert_pokemon_to_html(pokemon){
+    let new_a = create_element('a', {href:`/exercicios_e_projetos/pokedex/pokemon?number=${pokemon.number}&name=${pokemon.name}`})
     let new_li = create_element('li', {class_name: `pokemon ${pokemon.type}`});
     let new_span1 = create_element('span', {class_name:'number', data_value: `#${pokemon.number}`});
     let new_span2 = create_element('span', {class_name:'name', data_value: pokemon.name});
@@ -18,7 +20,8 @@ function convert_pokemon_to_html(pokemon){
     new_ol.innerHTML += pokemon.types.map((type) => `<li class="${type} type">${type}</li>`).join('')
     new_div.append(new_img,new_ol);
     new_li.append(new_span1,new_span2,new_div);
-    return new_li;
+    new_a.append(new_li)
+    return new_a;
 }
 function load_pokemons(offset,limit){
     const pokemon_ol = document.getElementById('pokemon_list');
