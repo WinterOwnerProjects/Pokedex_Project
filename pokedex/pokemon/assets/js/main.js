@@ -1,10 +1,11 @@
 const url_params =  new URLSearchParams(location.search);
 const number = url_params.get('number');
-const pkmn_name = url_params.get('name');
+const pkmn_type = url_params.get('type');
 const pokemon_url = `https://pokeapi.co/api/v2/pokemon/${number}`
 const pokemon_species = `https://pokeapi.co/api/v2/pokemon-species/${number}/`
 const pokemon_evolutions = `https://pokeapi.co/api/v2/evolution-chain/${number}`
 document.querySelector("#img2").setAttribute('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`)
+document.querySelector("body > main > section.container1").className = `container1 ${pkmn_type}`
 console.log(number)
 
 function get_api_infos(url){

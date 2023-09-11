@@ -10,7 +10,7 @@ function create_element(element, element_attributes = {}){
     return new_element
 }
 function convert_pokemon_to_html(pokemon){
-    let new_a = create_element('a', {href:`/exercicios_e_projetos/pokedex/pokemon?number=${pokemon.number}&name=${pokemon.name}`})
+    let new_a = create_element('a', {href:`/exercicios_e_projetos/pokedex/pokemon?number=${pokemon.number}&type=${pokemon.types[0]}`})
     let new_li = create_element('li', {class_name: `pokemon ${pokemon.type}`});
     let new_span1 = create_element('span', {class_name:'number', data_value: `#${pokemon.number}`});
     let new_span2 = create_element('span', {class_name:'name', data_value: pokemon.name});
