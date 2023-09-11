@@ -81,6 +81,7 @@ h3{
     font-weight: normal;
 }
 h3 > span{
+    margin-left: 0.2rem;
     font-weight: 500;
 }
 
@@ -115,36 +116,30 @@ h3 > span{
     font-weight: normal;
 }
 .attribute_value{
+    margin: 0 0.6rem 0 0.4rem;
     font-weight: bold;
 }
 /* Status-text Bars-config [Container2] */
 #hp_bar{
     border-color: red;
-    width:45px;
 }
 #attack_bar{
     border-color: orange;
-    width:60px;
 }
 #defense_bar{
     border-color: blue;
-    width:48px;
 }
 #spatk_bar{
     border-color: orange;
-    width:65px;
 }
 #spdef_bar{
     border-color: blue;
-    width:65px;
 }
 #speed_bar{
     border-color: rgb(0, 92, 128);
-    width:45px;
 }
 #total_bar{
     border-color: green;
-    width:117px;
 }
 
 /* Evolutions-text [Container 2] */
@@ -212,7 +207,8 @@ h3 > span{
 }
 @media screen and (min-width: 393px){
     #img1{
-        top:55px;
+        top:75px;
+        width: 60%;
     }
     #img2{
         position: relative;
@@ -227,6 +223,12 @@ h3 > span{
     #Status-text{
         padding-left: 3rem;
         height: 40vh;
+    }
+}
+@media screen and (min-width: 425px){
+    #img1{
+        top: -25px;
+        width: 50%;
     }
 }
 @media screen and (min-width: 768px){
@@ -284,15 +286,20 @@ h3 > span{
         font-size: 5rem;
     }
     #img1 {
-        top: -180px;
+        /*top: -180px;*/
     }
     #img2 {
         width: 350px;
     }
 }
+@media screen and (min-width: 1228px){
+    #img2{ 
+        width: 250px;
+    }
+}
 @media screen and (min-width: 1440px) {
     #img1 {
-        top: -300px;
+        top: -80px;
     } 
     #img2 {
         width: 450px;
